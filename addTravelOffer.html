@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleform.css">
+    <script src="addOffer.js" defer></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <section>
+        <fieldset>
+            <legend> <h1>ADD A TRAVEL OFFER</h1> </legend>
+            <form id="travelForm" action="" method="post">
+                <label for="titre">Title: <input type="text" id="titre"></label>
+                <div id="titleError" class="error"></div><br>
+
+                <label for="dest">Destination: <input type="text" id="dest"></label>
+                <div id="destError" class="error"></div><br>
+
+                <label for="dd">Departure Day: <input type="date" id="dd"></label>
+                <div id="ddError" class="error"></div><br>
+
+                <label for="dr">Return Day: <input type="date" id="dr"></label>
+                <div id="drError" class="error"></div><br>
+
+                <label for="prix">Price: <input type="number" id="prix"></label>
+                <div id="prixError" class="error"></div><br>
+
+                <label for="availability">Availability: <input type="checkbox" id="availability"></label><br>
+
+                <label for="categorie">Category: 
+                    <select name="categorie" id="categorie">
+                        <option value="adventure">Adventure</option>
+                        <option value="relaxation">Relaxation</option>
+                    </select>
+                </label><br>
+
+                <!-- Part 1: onClick Validation -->
+                <button type="button" onclick="validerFormulaire(event)">Add Offer (Part 1)</button>
+
+                <!-- Part 2: submit EventListener -->
+                <button type="submit" id="addOfferButton">Add Offer (Part 2)</button>
+
+                <div id="successMessage" class="success"></div>
+            </form>
+        </fieldset>
+    </section>
+</body>
+</html>
